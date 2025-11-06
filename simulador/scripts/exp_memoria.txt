@@ -1,0 +1,49 @@
+# Experimento: Comparacion FIFO vs LRU vs PFF
+# Analiza tasa de aciertos y page faults
+
+# Configurar FIFO
+memalg fifo
+
+# Crear procesos y acceder memoria
+new
+new
+new
+access 1 100
+access 1 300
+access 2 200
+access 1 100
+access 3 400
+run 20
+
+# Ver memoria
+mem
+memc
+
+# Cambiar a LRU
+memalg lru
+
+# Repetir patron
+access 1 100
+access 1 300
+access 2 200
+access 1 100
+access 3 400
+run 20
+
+mem
+memc
+
+# Cambiar a PFF
+memalg pff
+
+# Repetir patron
+access 1 100
+access 1 300
+access 2 200
+access 1 100
+access 3 400
+run 20
+
+mem
+memc
+stats

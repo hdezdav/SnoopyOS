@@ -1,0 +1,71 @@
+# Script maestro - Ejecuta todos los experimentos
+# Para usar: Copia y pega este contenido en el simulador
+
+# ============================================
+# EXPERIMENTO 1: Planificadores
+# ============================================
+sched rr
+new
+new
+new
+run 30
+stats
+fairness
+
+sched sjf
+new
+new
+new
+run 30
+stats
+fairness
+
+# ============================================
+# EXPERIMENTO 2: Memoria
+# ============================================
+memalg fifo
+access 1 100
+access 1 300
+mem
+
+memalg lru
+access 1 100
+access 1 300
+mem
+
+memalg pff
+access 1 100
+access 1 300
+mem
+stats
+
+# ============================================
+# EXPERIMENTO 3: Disco
+# ============================================
+disk_alg fcfs
+disk_request 1 30
+disk_request 2 70
+disk_run
+disk_run
+disk_show
+
+disk_alg sstf
+disk_request 3 20
+disk_request 4 80
+disk_run
+disk_run
+disk_show
+
+# ============================================
+# EXPERIMENTO 4: Heap
+# ============================================
+alloc 1 50
+alloc 2 100
+heap_status
+free 1000
+heap_status
+
+# ============================================
+# FIN
+# ============================================
+stats

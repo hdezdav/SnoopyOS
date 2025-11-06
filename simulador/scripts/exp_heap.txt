@@ -1,0 +1,26 @@
+# Experimento: Heap Buddy System
+# Demuestra fragmentacion y coalescencia
+
+# Asignar varios bloques
+alloc 1 50
+alloc 2 100
+alloc 3 30
+alloc 4 200
+
+heap_status
+
+# Liberar bloque intermedio (fragmentacion)
+free 1001
+
+heap_status
+
+# Liberar otro bloque adyacente (coalescencia)
+free 1002
+
+heap_status
+
+# Asignar nuevos bloques
+alloc 5 80
+alloc 6 40
+
+heap_status

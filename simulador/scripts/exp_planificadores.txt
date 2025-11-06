@@ -1,0 +1,38 @@
+# Experimento: Planificador Round Robin vs SJF
+# Compara tiempos de espera y equidad
+
+# Configurar Round Robin
+sched rr
+
+# Crear procesos
+new
+new
+new
+new
+new
+
+# Ejecutar simulacion
+run 50
+
+# Ver estadisticas
+ps
+stats
+fairness
+
+# Cambiar a SJF
+sched sjf
+
+# Crear nuevos procesos
+new
+new
+new
+new
+new
+
+# Ejecutar simulacion
+run 50
+
+# Comparar estadisticas
+ps
+stats
+fairness

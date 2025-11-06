@@ -1,0 +1,42 @@
+# Experimento: Problema de los Filosofos Comensales
+# Demuestra prevencion de deadlock
+
+# Crear mesa con 5 filosofos
+filosofos crear
+5
+
+# Hacer que todos piensen
+filosofos piensa
+0
+filosofos piensa
+1
+filosofos piensa
+2
+filosofos piensa
+3
+filosofos piensa
+4
+
+filosofos estado
+
+# Intentar que todos coman (potencial deadlock)
+filosofos come
+0
+filosofos come
+1
+filosofos come
+2
+
+filosofos estado
+
+# Filosofo 0 termina
+filosofos termina
+0
+
+filosofos estado
+
+# Ahora otro puede comer
+filosofos come
+3
+
+filosofos estado

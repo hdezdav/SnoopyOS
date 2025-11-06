@@ -1,0 +1,59 @@
+# Experimento: Comparacion FCFS vs SSTF vs SCAN
+# Analiza movimientos del cabezal
+
+# Configurar FCFS
+disk_alg fcfs
+
+# Agregar solicitudes
+disk_request 1 30
+disk_request 2 70
+disk_request 3 20
+disk_request 4 80
+disk_request 5 50
+
+# Procesar todas
+disk_run
+disk_run
+disk_run
+disk_run
+disk_run
+
+disk_show
+
+# Cambiar a SSTF
+disk_alg sstf
+
+# Mismas solicitudes
+disk_request 1 30
+disk_request 2 70
+disk_request 3 20
+disk_request 4 80
+disk_request 5 50
+
+# Procesar todas
+disk_run
+disk_run
+disk_run
+disk_run
+disk_run
+
+disk_show
+
+# Cambiar a SCAN
+disk_alg scan
+
+# Mismas solicitudes
+disk_request 1 30
+disk_request 2 70
+disk_request 3 20
+disk_request 4 80
+disk_request 5 50
+
+# Procesar todas
+disk_run
+disk_run
+disk_run
+disk_run
+disk_run
+
+disk_show
